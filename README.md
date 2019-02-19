@@ -17,4 +17,6 @@ J'ai utilisé GitBash pour créer, écrire, effectuer des commits et push les fi
 
 Voila comment j'ai résolu l'exercice de l'activité Git et GitHub partie 2.
 
+Y a un autre fichier README.txt dans le repository mais il correspond a la troisième partie du cours. 
+
 Bonne Continuation a tous.
