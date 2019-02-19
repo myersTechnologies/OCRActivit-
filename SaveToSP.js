@@ -9,15 +9,16 @@
         private String NAME = "firstname";
         private int SCORE = "score";
 	private Button button;
+	private EditText editText;
 
         @Override
                 protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
 		
-			//set the Button id created on layout xml
+			//set the Button and EditText id created on Activity layout .xml earlier
 			button = (Button) findViewById(R.id.saveBtn);
-			
+			editText = (EditText) findViewbyid(R.id.edittext_pour_prénom);
 			//Listener for button click and save Name and Score to SharedPreferences
 			button.setOnClickListener(new View.OnClickListener){
 			
@@ -33,6 +34,9 @@
 		//Voici le code (vous pouvez l'utiliser dans une fonction "onSave" par exemple")
 
 	public void onSave(){
+
+		//Recupération du texte saisi dans l'editText
+		NAME = editText.getText().toString();
 
 		//save user name
 		preferences.edit().putString(PREF_KEY_NAME_1, NAME).apply();
